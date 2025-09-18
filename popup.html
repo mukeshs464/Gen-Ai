@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentinel</title>
+    <style>
+      body { font-family: system-ui, Arial; padding: 10px; width: 340px; box-sizing: border-box; }
+      .badge { display:inline-block; padding:6px 10px; border-radius: 8px; font-size:13px; margin-right:6px; }
+      .green { background:#e7f8ee; border:1px solid #8ad1a1; color:#0b6b3b; }
+      .yellow { background:#fff8e1; border:1px solid #f2c94c; color:#6a4a00; }
+      .red { background:#ffe9e9; border:1px solid #eb5757; color:#9b1b1b; }
+      .alert { padding:8px; border-radius:8px; margin:8px 0; font-size:13px; }
+      #alerts { white-space: pre-wrap; font-size:13px; }
+      .section-title { font-size:13px; color:#555; margin-top:12px; }
+      #chart { width:100%; height:160px; margin-top:8px; }
+    </style>
+  </head>
+  <body>
+    <h3 style="margin:0 0 6px 0;">🛡️ Sentinel</h3>
+
+    <div id="status" class="badge">No analysis yet</div>
+    <div id="cats" class="section-title"></div>
+
+    <div id="alerts">Loading...</div>
+
+    <div id="genesis"></div>
+
+    <div class="section-title">Source Diversity (7 days)</div>
+    <div id="chart"></div>
+
+    <!-- d3 must be a local file (MV3 CSP forbids CDN) -->
+    <script src="d3.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
