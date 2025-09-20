@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Project Sentinel</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="icons/128.png" alt="Sentinel Logo" class="logo-img">
+                <h1>Project Sentinel</h1>
+            </div>
+            <p class="subtitle">Your Cognitive Defense System</p>
+        </header>
+
+        <!-- Dynamic View for Context Menu -->
+        <div id="dynamic-view" class="dynamic-view">
+            <!-- Content will be loaded here by popup.js -->
+        </div>
+
+        <!-- Main Dashboard -->
+        <div id="main-dashboard" class="main-dashboard">
+            <!-- Shield Status -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>🛡️ Cognitive Shield</h2>
+                    <span class="status-badge status-active">ACTIVE</span>
+                </div>
+                <div class="shield-metrics">
+                    <div class="metric-card metric-card--primary">
+                        <div class="metric-value" id="total-alerts">0</div>
+                        <div class="metric-label">Alerts This Week</div>
+                    </div>
+                    <div class="metric-card metric-card--secondary">
+                        <div class="metric-value" id="critical-alerts">0</div>
+                        <div class="metric-label">Critical Flags</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Echo Chamber Analytics -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>🌀 Information Diet</h2>
+                    <button class="refresh-btn" id="refresh-data">↻</button>
+                </div>
+                <div class="chart-container">
+                    <div id="bias-chart"></div>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-title">Diversity Score</div>
+                        <div class="metric-value" id="diversity-score">--</div>
+                        <div class="metric-subtitle">0-100 (Higher is better)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Reliability Avg</div>
+                        <div class="metric-value" id="reliability-score">--</div>
+                        <div class="metric-subtitle">0.0-1.0 (Higher is better)</div>
+                    </div>
+                </div>
+                <div class="nudge-container" id="nudge-container"></div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>⚡ Quick Actions</h2>
+                </div>
+                <div class="quick-actions">
+                    <button class="action-btn" id="action-analyze-current">
+                        <span>🧠 Analyze Current Page</span>
+                    </button>
+                    <button class="action-btn" id="action-clear-history">
+                        <span>🗑️ Clear History</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="d3.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

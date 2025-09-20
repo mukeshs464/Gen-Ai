@@ -1,0 +1,184 @@
+/* content.css - Cinematic, visually stunning UI for in-page alerts and badges */
+
+/* Alert Banners */
+.sentinel-alert-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 24px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    z-index: 2147483647;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-bottom: 4px solid transparent;
+    animation: slideDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: top center;
+    will-change: transform, opacity;
+    max-width: 90vw;
+    margin: 0 auto;
+    border-radius: 0 0 12px 12px;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%) scaleY(0.8); opacity: 0; }
+    to { transform: translateY(0) scaleY(1); opacity: 1; }
+}
+
+.sentinel-alert--emotional {
+    background: linear-gradient(135deg, #fff9db, #fff3bf);
+    border-color: #ffd43b;
+    color: #997404;
+}
+
+.sentinel-alert--fallacy {
+    background: linear-gradient(135deg, #f8d7da, #f1aeb5);
+    border-color: #ea9095;
+    color: #842029;
+}
+
+.sentinel-alert--suspicious {
+    background: linear-gradient(135deg, #e6f4ff, #b3d9ff);
+    border-color: #6ea8fe;
+    color: #084298;
+}
+
+.sentinel-alert-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.sentinel-alert-content {
+    flex: 1;
+}
+
+.sentinel-alert-content strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sentinel-alert-explanation {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.sentinel-alert-meta {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.sentinel-alert-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: -4px;
+}
+
+.sentinel-alert-close:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Media Badges */
+.sentinel-media-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 1000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.sentinel-media-badge:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.sentinel-media-badge--green {
+    background: rgba(40, 167, 69, 0.95);
+    color: white;
+    border-color: rgba(25, 108, 45, 0.6);
+}
+
+.sentinel-media-badge--yellow {
+    background: rgba(255, 193, 7, 0.95);
+    color: #856404;
+    border-color: rgba(255, 177, 0, 0.6);
+}
+
+.sentinel-media-badge--red {
+    background: rgba(220, 53, 69, 0.95);
+    color: white;
+    border-color: rgba(172, 31, 47, 0.6);
+}
+
+.sentinel-media-badge--blue {
+    background: rgba(13, 110, 253, 0.95);
+    color: white;
+    border-color: rgba(11, 94, 213, 0.6);
+}
+
+.sentinel-media-status {
+    font-size: 11px;
+}
+
+.sentinel-media-tooltip {
+    display: none;
+}
+
+/* Real-time Video Analysis Badge */
+.sentinel-video-analysis-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(40, 167, 69, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1000;
+    pointer-events: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

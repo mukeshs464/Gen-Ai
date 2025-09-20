@@ -1,0 +1,68 @@
+{
+    "domains": {
+        "cnn.com": { "bias": "left", "reliability": 0.82, "factuality": 0.85, "country": "US", "type": "news", "credibility_score": 0.83, "icon": "📰" },
+        "msnbc.com": { "bias": "left", "reliability": 0.75, "factuality": 0.80, "country": "US", "type": "news", "credibility_score": 0.77, "icon": "📰" },
+        "nytimes.com": { "bias": "left-center", "reliability": 0.90, "factuality": 0.92, "country": "US", "type": "news", "credibility_score": 0.91, "icon": "📰" },
+        "foxnews.com": { "bias": "right", "reliability": 0.60, "factuality": 0.65, "country": "US", "type": "news", "credibility_score": 0.62, "icon": "📰" },
+        "breitbart.com": { "bias": "right", "reliability": 0.40, "factuality": 0.45, "country": "US", "type": "news", "credibility_score": 0.42, "icon": "⚠️" },
+        "reuters.com": { "bias": "center", "reliability": 0.95, "factuality": 0.97, "country": "UK", "type": "news", "credibility_score": 0.96, "icon": "🌍" },
+        "apnews.com": { "bias": "center", "reliability": 0.96, "factuality": 0.98, "country": "US", "type": "news", "credibility_score": 0.97, "icon": "🌍" },
+        "infowars.com": { "bias": "conspiracy", "reliability": 0.10, "factuality": 0.05, "country": "US", "type": "blog", "credibility_score": 0.07, "icon": "⚠️" },
+        "9gag.com": { "bias": "satire", "reliability": 0.90, "factuality": 0.20, "country": "HK", "type": "entertainment", "credibility_score": 0.55, "icon": "🎭" },
+        "theonion.com": { "bias": "satire", "reliability": 0.95, "factuality": 0.05, "country": "US", "type": "satire", "credibility_score": 0.50, "icon": "🎭" },
+        "bbc.com": { "bias": "center", "reliability": 0.94, "factuality": 0.95, "country": "UK", "type": "news", "credibility_score": 0.94, "icon": "🌍" },
+        "aljazeera.com": { "bias": "left", "reliability": 0.85, "factuality": 0.88, "country": "QA", "type": "news", "credibility_score": 0.86, "icon": "🌍" },
+        "rt.com": { "bias": "right", "reliability": 0.30, "factuality": 0.35, "country": "RU", "type": "news", "credibility_score": 0.32, "icon": "⚠️" }
+    },
+    "nudges": {
+        "confirmation_bias": [
+            "🧠 Confirmation Bias Alert: Your recent reading heavily favors one perspective. Diversifying your sources builds a more complete understanding of the world.",
+            "🌀 Echo Chamber Warning: 80%+ of your content comes from a single ideological bubble. Try a 'perspective flip' with a source from the opposite side."
+        ],
+        "conspiracy_exposure": [
+            "🕵️ You've engaged with content from sources known for conspiracy theories. Here's a fact-checked analysis from a neutral outlet to provide context.",
+            "🧩 Critical Thinking Nudge: This topic has a history of misinformation. Cross-reference claims with multiple high-reliability sources before forming a conclusion."
+        ],
+        "satirical_exposure": [
+            "🎭 Satire Detected: This content is from a known satirical source. It's meant to be humorous, not factual. Enjoy responsibly!"
+        ],
+        "low_diversity": [
+            "🧭 Your information diet is a bit narrow. Explore a new, highly-rated source today to broaden your horizons.",
+            "📈 Diversity Score Low: Challenge yourself! Read an article from a source you normally wouldn't."
+        ],
+        "balanced": [
+            "✅ Great job! Your information diet is well-balanced. Keep seeking diverse perspectives!",
+            "🌟 You're a critical consumer of news. Maintain this healthy skepticism and curiosity."
+        ]
+    },
+    "manipulation_techniques": {
+        "emotional": [
+            { "phrase": "outrage", "severity": "high", "explanation": "Designed to provoke anger and bypass critical thinking." },
+            { "phrase": "shocking", "severity": "high", "explanation": "Creates artificial shock value to grab attention." },
+            { "phrase": "terrifying", "severity": "high", "explanation": "Uses fear to manipulate perception." },
+            { "phrase": "must see", "severity": "medium", "explanation": "Creates false urgency." },
+            { "phrase": "urgent", "severity": "medium", "explanation": "Pressures you to act without thinking." },
+            { "phrase": "breaking", "severity": "medium", "explanation": "Often used for non-critical news to grab attention." },
+            { "phrase": "disaster", "severity": "high", "explanation": "Amplifies negative emotions." },
+            { "phrase": "scandal", "severity": "high", "explanation": "Focuses on drama over substance." },
+            { "phrase": "corrupt", "severity": "high", "explanation": "Uses moral judgment to demonize." },
+            { "phrase": "evil", "severity": "high", "explanation": "Dehumanizes the subject." },
+            { "phrase": "destroy", "severity": "high", "explanation": "Uses apocalyptic language to create panic." },
+            { "phrase": "heartbreaking", "severity": "high", "explanation": "Appeals to pity or sadness." }
+        ],
+        "fallacy": [
+            { "name": "Straw Man", "pattern": "\\b(either you support|so you're saying|if you believe in|that means you think)\\b", "explanation": "Misrepresents an opponent's argument to make it easier to attack." },
+            { "name": "Ad Hominem", "pattern": "\\b(stupid|idiot|moron|liar|corrupt|hypocrite)\\b.*?\\b(says|claims|believes|thinks)\\b", "explanation": "Attacks the person instead of the argument." },
+            { "name": "False Dichotomy", "pattern": "\\b(either.*?or|you're either with us|only two choices|no middle ground)\\b", "explanation": "Presents only two options when more exist." },
+            { "name": "Appeal to Emotion", "pattern": "\\b(imagine if|think of the children|how would you feel)\\b", "explanation": "Uses emotion to persuade rather than logic." },
+            { "name": "Slippery Slope", "pattern": "\\b(if we allow|this will lead to|next thing you know)\\b", "explanation": "Suggests that a small first step leads to a chain of related events culminating in a significant impact." }
+        ],
+        "deceptive": [
+            { "phrase": "experts say", "severity": "medium", "explanation": "Vague authority, no specific experts named." },
+            { "phrase": "studies show", "severity": "medium", "explanation": "No link to actual study provided." },
+            { "phrase": "everyone knows", "severity": "low", "explanation": "Appeal to popularity fallacy." },
+            { "phrase": "common sense", "severity": "low", "explanation": "Dismisses need for evidence." },
+            { "phrase": "according to sources", "severity": "high", "explanation": "Anonymous sources - impossible to verify credibility." }
+        ]
+    }
+}

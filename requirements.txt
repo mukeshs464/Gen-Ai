@@ -1,0 +1,41 @@
+# --- Core Backend ---
+fastapi
+uvicorn[standard]
+
+# --- Environment & Config ---
+python-dotenv
+
+# --- Database ---
+sqlalchemy
+aiosqlite
+
+# --- Networking / HTTP ---
+requests
+httpx
+aiohttp
+
+# --- Caching ---
+redis
+cachetools
+
+# --- Logging & Monitoring ---
+loguru
+tenacity
+prometheus-fastapi-instrumentator
+
+# --- Hugging Face / Transformers ---
+transformers
+huggingface-hub
+sentence-transformers
+
+# --- Deep Learning ---
+torch
+torchvision
+
+# --- Image Processing ---
+opencv-python-headless
+pillow
+imagehash
+
+# --- Security & Crypto ---
+cryptography
